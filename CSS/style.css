@@ -1,0 +1,276 @@
+/* imported style sheets from Utility dir */
+@import url('util.css');
+@import url('landing-page.css');
+
+
+/* basic resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    min-height: 700px;
+    max-width: 1920px;
+    min-width: 980px;
+    margin: auto;
+}
+
+
+/* ************************ */
+/* Header Styles */
+/* ************************ */
+
+header {
+    background-color: #eee;
+}
+
+#template-menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon{
+    width: 38px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#template-menu {
+    padding: 2px 4px;
+    border: 1px solid var(--ue-blue);
+    border-radius: 2px;
+}
+
+#template-menu:focus {
+    border-color: var(--ue-blue); 
+    outline: none; 
+}
+
+.login-link {
+    text-decoration: none;
+    color: var(--border-red);
+    padding: 4px 20px;
+    border: 1px solid var(--border-red);
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.login-link:hover {
+    color: var(--ue-blue);
+    background-color:var(--ue-gold-light);
+    border: 1px solid var(--ue-blue);
+    border-radius: 2px;
+    transition: all 0.2s;
+
+}
+
+/* ******************* */
+/* Sidebar Nav menu and logo */
+/* ******************* */
+.sidebar-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    width: 325px;
+    height: 100vh;
+    min-height: 700px;  
+    padding: 0px 20px;
+    box-shadow: 10px 0 10px -12px rgba(0,0,0,0.6), 0 -1px 10px -10px rgba(0,0,0,0.6);
+    z-index: 10;
+}
+
+.sidebar-container section {
+    margin-top: 16px;
+}
+
+.logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper img {
+    width: 225px;
+    padding-top: 10px;
+}
+
+.logo-wrapper,
+header {
+    min-height: 8vh;
+}
+
+.sidebar-container .banner h2 {
+    padding: 4px 0;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    color: var(--ue-gold);
+    background-color: var(--ue-blue);
+    font-family: var(--banner-font);
+    font-weight: 400;
+    text-align: center;
+    border-radius: 2px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+.product-title,.sub-product-title {
+    padding: 2px;
+    font-size:17px; 
+    font-weight:bold; 
+    font-family: var(--primary-font);
+    color: var(--ue-blue);
+    width: 100%;
+    background-color: #eee;
+    position: relative;
+    display: inline-block;
+}
+
+.sub-product-title {
+    width: auto;
+    font-size:16px;
+}
+
+nav ul {
+    padding: 10px;
+    list-style: none;
+}
+
+nav ul li {
+    padding-top: 2.5px;    
+    padding-bottom: 5px;    
+}
+
+.product-link {
+    font-size: 15px; 
+    font-weight:400;
+    font-family: var(--primary-font);
+    color: var(--ue-blue);
+}
+
+.copyright {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--flat-blue)
+}
+
+
+/* ******************* */
+/* Header Element Styles */
+/* ******************* */
+header {
+    width: 100%;
+    padding: 0 10px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#landing-page-header {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--flat-blue);
+}
+
+
+/* Customer Dock Section in Header */
+.customer-dock {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.welcome span {
+    color: var(--flat-blue);
+    font-size: 16px;
+}
+
+.cart-icon-wrapper {
+    display: flex;
+    justify-content: end;
+    margin-left: 20px;
+}
+.cart-icon-wrapper a{    
+    text-decoration:none;
+    position: relative;
+}
+
+.cart-icon {
+    width: 46px;
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    animation: pulse .5s;
+}
+
+.cart-empty-msg {
+    padding: 3px 21px;
+    position: absolute;
+    top: 45px;
+    right: 12px;
+    letter-spacing: 0.8px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--bg-red);
+    border-radius: 2px;
+}
+
+.order-count {
+    position: absolute;
+    padding: 4px 7px;
+    top: -7px;
+    left: -15px;
+    background-color: var(--ue-gold);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--ue-blue);
+    border-radius: 40%;
+}
+
+
+/* ******************* */
+/* Main Element Styles */
+/* ******************* */
+main {
+    width: 100%;
+    color: var(--ue-blue);
+    position: relative; /* relative for corner Logo in Main */
+    background-color: transparent;
+}
+
+main::before {
+    content: "";
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Images/UEI-circle-corner.png);
+    background-size: 25%;  
+    background-position: right bottom;  
+    background-repeat: no-repeat;  
+    opacity: 0.25;  
+    z-index: -1;
+}
+
+
+

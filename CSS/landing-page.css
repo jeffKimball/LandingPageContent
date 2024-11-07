@@ -1,0 +1,43 @@
+/* imported style sheets from Utility dir */
+@import url('../Utils/util.css');
+
+body {
+    color: var(--ue-blue);  
+    font-family: var(--primary-font)  
+}
+
+/* area for marketing to build content */
+.landing-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.landing-page-content h1 {
+    background-color: var(--bg-lightgrey);
+    width: 50%;
+    text-align: center;
+}
+
+.social-media-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.social-media-wrapper img {
+    opacity: 0.9;
+    width: 32px;
+    padding: 0 5px 10px 0;
+}
+
+.social-media-wrapper a:hover img {
+    animation: pulse .5s;
+}
+
+
